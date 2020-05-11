@@ -40,6 +40,145 @@
       <p class="affiliation"><a href="http://idlab.technology/">Ghent University – imec – IDLab, Belgium</a></p>
     </section>
 
+    <section id="start" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+        <h2 property="schema:name" class="big">Solid: a decentralized Web ecosystem</h2>
+        <img src="img/solid-logo.svg" alt="Solid" height="350px" style="float: left" />
+        <ul style="margin-top: 125px">
+            <li><h3>Decouples <em>data</em> from <em>application</em></h3></li>
+            <li><h3>Personal data pods &rarr; data ownership</h3></li>
+            <li><h3>Collection of open Web standards</h3></li>
+        </ul>
+    </section>
+    
+    <section id="index" class="slide index">
+      <ul>
+        <li><a href="#index-standards">Standards</a></li>
+        <li><a href="#index-tools">Tools</a></li>
+      </ul>
+    </section>
+    
+    <section id="index-standards" class="slide index">
+      <ul>
+        <li class="current"><a href="#index-standards">Standards</a></li>
+        <li><a href="#index-tools">Tools</a></li>
+      </ul>
+    </section>
+    
+    <section id="standard-overview" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+        <h2 property="schema:name">Solid combines several Web standards</h2>
+        <ul>
+            <li><h3>Linked Data Platform</h3><span class="indent">Reading and Writing over HTTP</span></li>
+            <li><h3>WebID-OIDC</h3><span class="indent">Authentication</span></li>
+            <li><h3>Web Access Control</h3><span class="indent">Authorization</span></li>
+            <li><h3>Linked Data Notifications</h3><span class="indent">Sending and receiving notifications</span></li>
+        </ul>
+    </section>
+    
+    <section id="standard-ldp" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+        <h2 property="schema:name">Reading and writing over HTTP</h2>
+        <h3><em><a href="https://www.w3.org/TR/ldp/">Linked Data Platform (LDP)</a></em></h3>
+        <ul>
+            <li>
+                <h3>Pods can store RDF and non-RDF files</h3>
+                <span class="indent">JSON-LD, Turtle, HTML+RDFa, ...</span>
+                <span class="indent">Binary data, raw text, ...</span>
+            </li>
+            <li>
+                <h3>Directories represented by LDP Basic Containers</h3>
+                <span class="indent">Enables Linked-Data-based directory content discovery</span>
+            </li>
+            <li>
+                <h3>Read and write via HTTP methods and content-negotiation</h3>
+                <span class="indent">GET, POST, PUT, PATCH, DELETE</span>
+                <br />
+                <span class="indent">PATCH: <a href="https://www.w3.org/TR/sparql11-update/">SPARQL update</a> queries</span>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="standard-webidoidc" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+        <h2 property="schema:name">Users are in control of their own identity</h2>
+        <h3><em><a href="https://github.com/solid/webid-oidc-spec">WebID-OpenID Connect (WebID-OIDC)</a></em></h3>
+        <ul>
+            <li>
+                <h3>WebID: a dereferenceable RDF Web resource</h3>
+                <span class="indent"><a href="https://rubensworks.solid.community/profile/card#me">https://rubensworks.solid.community/profile/card#me</a></span>
+                <br />
+                <span class="indent">Profile contains basic information: name, image, ...</span>
+            </li>
+            <li>
+                <h3>Identity provider authenticates WebID</h3>
+                <span class="indent">WebID points to an identity provider server (<em>!= pod server</em>)</span>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="standard-webidoidc-example" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+        <h2 property="schema:name">Different identity providers exist</h2>
+        <h3>Logging into an app requires user to select its identity provider</h3>
+        <center><img src="img/webid-oidc-1.png" alt="Select IDP" width="450px" /></center>
+        <center><img src="img/webid-oidc-2.png" alt="Log in" width="450px" /></center>
+    </section>
+    
+    <section id="standard-wac" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+        <h2 property="schema:name">Fine-grained access control to data</h2>
+        <h3><em><a href="https://github.com/solid/web-access-control-spec">Web Access Control (WAC)</a></em></h3>
+        <ul>
+            <li>
+                <h3>Each file has a corresponding <em>Access Control List</em> (ACL) file</h3>
+                <span class="indent">Describes <em>who (WebID) has access</em> to the resource, and the <em>modes of access</em>.</span>
+            </li>
+            <li>
+                <h3>Different modes of access</h3>
+                <span class="indent">Read, write, append, control</span>
+            </li>
+            <li>
+                <h3>ACLs can inherit from ACLs in parent directories</h3>
+                <span class="indent">Makes it easier to defined scoped access</span>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="standard-ldn" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+        <h2 property="schema:name">Sending notifications across pods</h2>
+        <h3><em><a href="https://www.w3.org/TR/ldn/">Linked Data Notifications (LDN)</a></em></h3>
+        <ul>
+            <li>
+                <h3><em>Senders</em> can send <em>notifications</em> to the <em>inbox</em> of <em>consumers</em></h3>
+                <span class="indent">For apps that require interaction between different users</span>
+            </li>
+        </ul>
+        <center><img src="img/ldn.svg" alt="LDN" width="500px" /></center>
+    </section>
+    
+    <section id="standard-other" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+        <h2 property="schema:name">Other standards</h2>
+        <ul>
+            <li>
+                <h3><a href="https://github.com/solid/solid-spec/blob/master/api-websockets.md">WebSockets</a></h3>
+                <span class="indent">API for real-time resource notifications</span>
+            </li>
+            <li>
+                <h3><a href="https://github.com/solid/solid-spec/blob/master/authn-webid-tls.md">WebID-TLS</a></h3>
+                <span class="indent">Authentication using TLS certificates</span>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="index-tools" class="slide index">
+      <ul>
+        <li><a href="#index-standards">Standards</a></li>
+        <li class="current"><a href="#index-tools">Tools</a></li>
+      </ul>
+    </section>
+    
+    <section id="index-final" class="slide index">
+      <ul>
+        <li><a href="#index-standards">Standards</a></li>
+        <li><a href="#index-tools">Tools</a></li>
+      </ul>
+    </section>
+
     <footer>
       <p class="license">
             &#169; <span property="schema:copyrightYear">2020</span> <a href="https://www.rubensworks.net" rel="schema:copyrightHolder"><span resource="https://www.rubensworks.net/#me">Ruben Taelman</span></a>
