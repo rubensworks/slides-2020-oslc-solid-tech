@@ -81,6 +81,7 @@
             <li>
                 <h3>Pods can store RDF and non-RDF files</h3>
                 <span class="indent">JSON-LD, Turtle, HTML+RDFa, ...</span>
+                <br />
                 <span class="indent">Binary data, raw text, ...</span>
             </li>
             <li>
@@ -92,6 +93,25 @@
                 <span class="indent">GET, POST, PUT, PATCH, DELETE</span>
                 <br />
                 <span class="indent">PATCH: <a href="https://www.w3.org/TR/sparql11-update/">SPARQL update</a> queries</span>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="standard-ldp-client" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+        <h2 property="schema:name" class="big">Solid server API is relatively simple</h2>
+        <h3>&rarr; Client-side Solid apps must be smart</h3>
+        <ul>
+            <li>
+                <h3>Hypermedia-based apps</h3>
+                <span class="indent">Discover files in containers, links to relevant files, ...</span>
+            </li>
+            <li>
+                <h3>Queries as abstraction layer</h3>
+                <span class="indent">Allows apps to be query-driven</span>
+                <br />
+                <span class="indent">Reusable client-side query engines handle complexities</span>
+                <br />
+                <span class="indent"><em>SPARQL, GraphQL, LDflex, ...</em></span>
             </li>
         </ul>
     </section>
