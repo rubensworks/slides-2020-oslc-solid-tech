@@ -172,6 +172,107 @@
       </ul>
     </section>
     
+    <section id="tools-overview" class="slide" inlist="" rel="schema:hasPart" resource="#tools-overview">
+        <h2 property="schema:name">Tools and services for Solid</h2>
+        <ul>
+            <li>
+                <h3><a href="https://github.com/solid/node-solid-server">Node Solid Server</a></h3>
+                <span class="indent">File-system-based Solid server in JavaScript</span>
+            </li>
+            <li>
+                <h3><a href="https://github.com/solid/solid-auth-client">Solid Auth Client</a></h3>
+                <span class="indent">Library to perform authenticated requests to Solid pods</span>
+            </li>
+            <li>
+                <h3><a href="https://github.com/inrupt/solid-react-sdk">Solid React SDK</a></h3>
+                <span class="indent">Components for developing Solid apps in React</span>
+            </li>
+            <li>
+                <h3><a href="https://inrupt.net/">inrupt.net</a> Node Solid Server instance</h3>
+                <span class="indent">A free pod service</span>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="tools-nss" class="slide" inlist="" rel="schema:hasPart" resource="#tools-nss">
+        <h2 property="schema:name">Node Solid Server hosts file-based pods</h2>
+        <h3>
+            <em>Open source: <a href="https://github.com/solid/node-solid-server">https://github.com/solid/node-solid-server</a><br /></em>
+        </h3>
+        <ul>
+            <li>
+                <h3>Reference implementation of Solid</h3>
+                <span class="indent">Implements LDP, WAC, WebID-OIDC, ... specifications</span>
+            </li>
+            <li>
+                <h3>Single-user or many-user mode</h3>
+                <span class="indent">Host a <em>personal</em> data pod, or service for hosting <em>many</em> data pods</span>
+            </li>
+            <li>
+                <h3>Optionally hosts WebIDs</h3>
+                <span class="indent">For people without a WebID, a new WebID can be created next to your pod</span>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="tools-auth" class="slide" inlist="" rel="schema:hasPart" resource="#tools-auth">
+        <h2 property="schema:name">Auth Client for authenticated requests</h2>
+        <h3><em>Open source: <a href="https://github.com/solid/solid-auth-client">https://github.com/solid/solid-auth-client</a></em></h3>
+        <ul>
+            <li>
+                <h3>JavaScript library for logging into Solid apps</h3>
+                <span class="indent">Implements the WebID-OIDC protocol for clients</span>
+            </li>
+            <li>
+                <h3><code>solid.auth.fetch</code> enables authenticated HTTP(S) requests</h3>
+                <span class="indent"><code>solid.auth.fetch</code> has the same interface as <code>fetch</code></span>
+            </li>
+            <li>
+                <pre>if (!await solid.auth.currentSession())
+  await solid.auth.popupLogin({ popupUri });
+await fetch('https://timbl.com/timbl/Public/friends.ttl');</pre>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="tools-react" class="slide" inlist="" rel="schema:hasPart" resource="#tools-react">
+        <h2 property="schema:name">Solid React SDK for developing Solid apps</h2>
+        <h3><em>SDK overview: <a href="https://github.com/inrupt/solid-react-sdk">https://github.com/inrupt/solid-react-sdk</a></em></h3>
+        <ul>
+            <li>
+                <h3><a href="https://github.com/inrupt/generator-solid-react">Solid React Application Generator</a></h3>
+                <span class="indent">Generates a basic Solid app with basic files and dependencies</span>
+            </li>
+            <li>
+                <h3><a href="https://github.com/inrupt/solid-react-components">Solid React Components Library</a></h3>
+                <span class="indent">Reusable React components for Solid applications</span>
+                <br />
+                <span class="indent"><em>login forms, private routes, uploaders, ShEx forms</em></span>
+                <br />
+                <span class="indent"><a href="https://github.com/rubensworks/solid-react-graphql-ld.js">GraphQL-based components</a></span>
+            </li>
+            <li>
+                <h3>Under active development</h3>
+                <span class="indent">WIP: I18N, user preferences, Linked Data Notifications, data discovery, ...</span>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="tools-pods" class="slide" inlist="" rel="schema:hasPart" resource="#tools-pods">
+        <h2 property="schema:name"><a href="https://inrupt.net/">inrupt.net</a> for easily creating a Solid pod</h2>
+        <ul>
+            <li>
+                <h3>Public Node Solid Server instance</h3>
+                <span class="indent">Everyone can register for a pod and WebID</span>
+            </li>
+            <li>
+                <h3>Storage quota of 25MB</h3>
+                <span class="indent">To avoid abuse of this public service</span>
+            </li>
+        </ul>
+        <center><a href="https://inrupt.net/"><img src="img/inrupt-net.png" alt="Inrupt.net" height="300px" /></a></center>
+    </section>
+    
     <section id="index-final" class="slide index">
       <ul>
         <li><a href="#index-standards">Standards</a></li>
