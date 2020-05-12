@@ -6,6 +6,7 @@ a,
 .slide a {
     color: #1756a9;
     text-decoration: none;
+    border-bottom: 2px solid #b8c3d1;
     -o-transition: .2s;
     -ms-transition: .2s;
     -moz-transition: .2s;
