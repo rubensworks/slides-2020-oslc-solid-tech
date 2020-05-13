@@ -152,10 +152,29 @@
                 <h3>Different modes of access</h3>
                 <span class="indent">Read, write, append, control</span>
             </li>
-            <li>
+            <!--<li>
                 <h3>ACLs can inherit from ACLs in parent directories</h3>
                 <span class="indent">Makes it easier to defined scoped access</span>
-            </li>
+            </li>-->
+        </ul>
+    </section>
+    
+    <section id="standard-wac-example" class="slide" inlist="" rel="schema:hasPart" resource="#standard-wac-example">
+        <h2 property="schema:name">WAC: https://alice.inrupt.net/file1.acl</h2>
+        <pre>
+@prefix  acl:  <http://www.w3.org/ns/auth/acl#>  .
+
+&lt;#authorization1&gt;
+    a             acl:Authorization;
+    acl:agent     &lt;https://alice.inrupt.net/profile/card#me&gt;;
+    acl:accessTo  &lt;https://alice.inrupt.net/file1&gt;;
+    acl:mode      acl:Read, 
+                  acl:Write, 
+                  acl:Control.
+        </pre>
+        <ul>
+            <li><code>file1.acl</code> defines access for <code>file1</code>.</li>
+            <li>Alice has Read, Write and Control rights.</li>
         </ul>
     </section>
     
