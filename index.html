@@ -50,21 +50,21 @@
         </ul>
     </section>
     
-    <section id="index" class="slide index">
+    <section id="index" class="slide index" inlist="" rel="schema:hasPart" resource="#index">
       <ul>
         <li><a href="#index-standards">Standards</a></li>
         <li><a href="#index-tools">Tools</a></li>
       </ul>
     </section>
     
-    <section id="index-standards" class="slide index">
+    <section id="index-standards" class="slide index" inlist="" rel="schema:hasPart" resource="#index-standards">
       <ul>
         <li class="current"><a href="#index-standards">Standards</a></li>
         <li><a href="#index-tools">Tools</a></li>
       </ul>
     </section>
     
-    <section id="standard-overview" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+    <section id="standard-overview" class="slide" inlist="" rel="schema:hasPart" resource="#standards-overview">
         <h2 property="schema:name">Solid combines several Web standards</h2>
         <ul>
             <li><h3>Linked Data Platform</h3><span class="indent">Reading and Writing over HTTP</span></li>
@@ -74,7 +74,7 @@
         </ul>
     </section>
     
-    <section id="standard-ldp" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+    <section id="standard-ldp" class="slide" inlist="" rel="schema:hasPart" resource="#standards-ldp">
         <h2 property="schema:name">Reading and writing over HTTP</h2>
         <h3><em><a href="https://www.w3.org/TR/ldp/">Linked Data Platform (LDP)</a></em></h3>
         <ul>
@@ -85,38 +85,40 @@
                 <span class="indent">Binary data, raw text, ...</span>
             </li>
             <li>
-                <h3>Directories represented by LDP Basic Containers</h3>
-                <span class="indent">Enables Linked-Data-based directory content discovery</span>
-            </li>
-            <li>
                 <h3>Read and write via HTTP methods and content-negotiation</h3>
                 <span class="indent">GET, POST, PUT, PATCH, DELETE</span>
                 <br />
                 <span class="indent">PATCH: <a href="https://www.w3.org/TR/sparql11-update/">SPARQL update</a> queries</span>
             </li>
+            <li>
+                <h3>Directories represented by LDP Basic Containers</h3>
+                <span class="indent">Enables Linked-Data-based directory content discovery</span>
+            </li>
         </ul>
     </section>
     
-    <section id="standard-ldp-client" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+    <section id="standard-ldp-client" class="slide" inlist="" rel="schema:hasPart" resource="#standards-ldp-client">
         <h2 property="schema:name" class="big">Solid server API is relatively simple</h2>
         <h3>&rarr; Client-side Solid apps must be smart</h3>
         <ul>
             <li>
                 <h3>Hypermedia-based apps</h3>
                 <span class="indent">Discover files in containers, links to relevant files, ...</span>
+                <br />
+                <span class="indent">Reusable libraries exist: SPARQL, GraphQL, ...</span>
             </li>
-            <li>
+            <!--<li>
                 <h3>Queries as abstraction layer</h3>
                 <span class="indent">Allows apps to be query-driven</span>
                 <br />
                 <span class="indent">Reusable client-side query engines handle complexities</span>
                 <br />
                 <span class="indent"><em>SPARQL, GraphQL, LDflex, ...</em></span>
-            </li>
+            </li>-->
         </ul>
     </section>
     
-    <section id="standard-webidoidc" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+    <section id="standard-webidoidc" class="slide" inlist="" rel="schema:hasPart" resource="#standards-webidoidc">
         <h2 property="schema:name">Users are in control of their own identity</h2>
         <h3><em><a href="https://github.com/solid/webid-oidc-spec">WebID-OpenID Connect (WebID-OIDC)</a></em></h3>
         <ul>
@@ -129,18 +131,25 @@
             <li>
                 <h3>Identity provider authenticates WebID</h3>
                 <span class="indent">WebID points to an identity provider server (<em>!= pod server</em>)</span>
+                <br />
+                <span class="indent">&rarr; Different identity providers exist</span>
             </li>
         </ul>
     </section>
     
-    <section id="standard-webidoidc-example" class="slide" inlist="" rel="schema:hasPart" resource="#start">
-        <h2 property="schema:name">Different identity providers exist</h2>
-        <h3>Logging into an app requires user to select its identity provider</h3>
-        <center><img src="img/webid-oidc-1.png" alt="Select IDP" width="450px" /></center>
-        <center><img src="img/webid-oidc-2.png" alt="Log in" width="450px" /></center>
+    <section id="standard-webidoidc-example-1" class="slide" inlist="" rel="schema:hasPart" resource="#standards-webidoidc-example-1">
+        <h2 property="schema:name">Logging in to a Solid app</h2>
+        <h3>Select an identity provider</h3>
+        <center><img src="img/webid-oidc-1.png" alt="Select IDP" width="850px" /></center>
     </section>
     
-    <section id="standard-wac" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+    <section id="standard-webidoidc-example-2" class="slide" inlist="" rel="schema:hasPart" resource="#standards-webidoidc-example-1">
+        <h2 property="schema:name">Logging in to a Solid app</h2>
+        <h3>Logging in at the selected identity provider</h3>
+        <center><img src="img/webid-oidc-2.png" alt="Log in" width="850px" /></center>
+    </section>
+    
+    <section id="standard-wac" class="slide" inlist="" rel="schema:hasPart" resource="#standards-wac">
         <h2 property="schema:name">Fine-grained access control to data</h2>
         <h3><em><a href="https://github.com/solid/web-access-control-spec">Web Access Control (WAC)</a></em></h3>
         <ul>
@@ -178,7 +187,7 @@
         </ul>
     </section>
     
-    <section id="standard-ldn" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+    <section id="standard-ldn" class="slide" inlist="" rel="schema:hasPart" resource="#standards-ldn">
         <h2 property="schema:name">Sending notifications across pods</h2>
         <h3><em><a href="https://www.w3.org/TR/ldn/">Linked Data Notifications (LDN)</a></em></h3>
         <ul>
@@ -190,7 +199,7 @@
         <center><img src="img/ldn.svg" alt="LDN" width="500px" /></center>
     </section>
     
-    <section id="standard-other" class="slide" inlist="" rel="schema:hasPart" resource="#start">
+    <section id="standard-other" class="slide" inlist="" rel="schema:hasPart" resource="#standards-other">
         <h2 property="schema:name">Other standards</h2>
         <ul>
             <li>
@@ -204,7 +213,7 @@
         </ul>
     </section>
     
-    <section id="index-tools" class="slide index">
+    <section id="index-tools" class="slide index" inlist="" rel="schema:hasPart" resource="#index-tools">
       <ul>
         <li><a href="#index-standards">Standards</a></li>
         <li class="current"><a href="#index-tools">Tools</a></li>
@@ -312,7 +321,7 @@ await fetch('https://timbl.com/timbl/Public/friends.ttl');</pre>
         <center><a href="https://inrupt.net/"><img src="img/inrupt-net.png" alt="Inrupt.net" height="300px" /></a></center>
     </section>
     
-    <section id="index-final" class="slide index">
+    <section id="index-final" class="slide index" inlist="" rel="schema:hasPart" resource="#index-final">
       <ul>
         <li><a href="#index-standards">Standards</a></li>
         <li><a href="#index-tools">Tools</a></li>
