@@ -37,31 +37,19 @@
       <ul class="author inline">
           <li class="current"><a href="https://www.rubensworks.net/">Ruben Taelman</a></li>
       </ul>
+      <img src="img/solid-logo.svg" alt="Solid" height="270px" style="float: right" />
       <p class="affiliation"><a href="http://idlab.technology/">Ghent University – imec – IDLab, Belgium</a></p>
     </section>
 
     <section id="start" class="slide" inlist="" rel="schema:hasPart" resource="#start">
         <h2 property="schema:name" class="big">Solid: a decentralized Web ecosystem</h2>
-        <img src="img/solid-logo.svg" alt="Solid" height="350px" style="float: left" />
-        <ul style="margin-top: 125px">
+        <div height="30em">&nbsp;</div>
+        <img src="img/solid-decentralized.svg" alt="Solid Pods" width="400px" style="float: right" />
+        <ul>
             <li><h3>Decouples <em>data</em> from <em>application</em></h3></li>
-            <li><h3>Personal data pods &rarr; data ownership</h3></li>
+            <li><h3>Personal data pods &rarr; control</h3></li>
             <li><h3>Collection of open Web standards</h3></li>
         </ul>
-    </section>
-    
-    <section id="index" class="slide index" inlist="" rel="schema:hasPart" resource="#index">
-      <ul>
-        <li><a href="#index-standards">Standards</a></li>
-        <li><a href="#index-tools">Tools</a></li>
-      </ul>
-    </section>
-    
-    <section id="index-standards" class="slide index" inlist="" rel="schema:hasPart" resource="#index-standards">
-      <ul>
-        <li class="current"><a href="#index-standards">Standards</a></li>
-        <li><a href="#index-tools">Tools</a></li>
-      </ul>
     </section>
     
     <section id="standard-overview" class="slide" inlist="" rel="schema:hasPart" resource="#standards-overview">
@@ -94,27 +82,6 @@
                 <h3>Directories represented by LDP Basic Containers</h3>
                 <span class="indent">Enables Linked-Data-based directory content discovery</span>
             </li>
-        </ul>
-    </section>
-    
-    <section id="standard-ldp-client" class="slide" inlist="" rel="schema:hasPart" resource="#standards-ldp-client">
-        <h2 property="schema:name" class="big">Solid server API is relatively simple</h2>
-        <h3>&rarr; Client-side Solid apps must be smart</h3>
-        <ul>
-            <li>
-                <h3>Hypermedia-based apps</h3>
-                <span class="indent">Discover files in containers, links to relevant files, ...</span>
-                <br />
-                <span class="indent">Reusable libraries exist: SPARQL, GraphQL, ...</span>
-            </li>
-            <!--<li>
-                <h3>Queries as abstraction layer</h3>
-                <span class="indent">Allows apps to be query-driven</span>
-                <br />
-                <span class="indent">Reusable client-side query engines handle complexities</span>
-                <br />
-                <span class="indent"><em>SPARQL, GraphQL, LDflex, ...</em></span>
-            </li>-->
         </ul>
     </section>
     
@@ -213,13 +180,6 @@
         </ul>
     </section>
     
-    <section id="index-tools" class="slide index" inlist="" rel="schema:hasPart" resource="#index-tools">
-      <ul>
-        <li><a href="#index-standards">Standards</a></li>
-        <li class="current"><a href="#index-tools">Tools</a></li>
-      </ul>
-    </section>
-    
     <section id="tools-overview" class="slide" inlist="" rel="schema:hasPart" resource="#tools-overview">
         <h2 property="schema:name">Tools and services for Solid</h2>
         <ul>
@@ -238,6 +198,49 @@
             <li>
                 <h3><a href="https://inrupt.net/">inrupt.net</a> Node Solid Server instance</h3>
                 <span class="indent">A free pod service</span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="summary" class="slide" inlist="" rel="schema:hasPart" resource="#summary">
+        <h2 class="big" property="schema:name">Summary</h2>
+        <ul>
+            <li>
+                <h3>Solid aims to <em>re-decentralize</em> the Web</h3>
+                <span class="indent">Decouples data from applications</span>
+            </li>
+            <li>
+                <h3>Solid is not a tool, but an <em>ecosystem</em></h3>
+                <span class="indent">A collection of open Web standards (LDP, WebID-OIDC, WAC, LDN, ...)</span>
+            </li>
+            <li>
+                <h3>Tools and libraries implement these standards</h3>
+                <span class="indent">Node Solid Server, Solid React SDK, ...</span>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="backup" class="slide" inlist="" rel="schema:hasPart" resource="#backup">
+        <h2 class="big" property="schema:name" style="text-align: center">Backup Slides</h2>
+    </section>
+    
+    <section id="standard-ldp-client" class="slide" inlist="" rel="schema:hasPart" resource="#standards-ldp-client">
+        <h2 property="schema:name" class="big">Solid server API is relatively simple</h2>
+        <h3>&rarr; Client-side Solid apps must be smart</h3>
+        <ul>
+            <li>
+                <h3>Hypermedia-based apps</h3>
+                <span class="indent">Discover files in containers, links to relevant files, ...</span>
+                <br />
+                <span class="indent">Reusable libraries exist: SPARQL, GraphQL, ...</span>
+            </li>
+            <li>
+                <h3>Queries as abstraction layer</h3>
+                <span class="indent">Allows apps to be query-driven</span>
+                <br />
+                <span class="indent">Reusable client-side query engines handle complexities</span>
+                <br />
+                <span class="indent"><em>SPARQL, GraphQL, LDflex, ...</em></span>
             </li>
         </ul>
     </section>
@@ -319,31 +322,6 @@ await fetch('https://timbl.com/timbl/Public/friends.ttl');</pre>
             </li>
         </ul>
         <center><a href="https://inrupt.net/"><img src="img/inrupt-net.png" alt="Inrupt.net" height="300px" /></a></center>
-    </section>
-    
-    <section id="index-final" class="slide index" inlist="" rel="schema:hasPart" resource="#index-final">
-      <ul>
-        <li><a href="#index-standards">Standards</a></li>
-        <li><a href="#index-tools">Tools</a></li>
-      </ul>
-    </section>
-
-    <section id="summary" class="slide" inlist="" rel="schema:hasPart" resource="#summary">
-        <h2 class="big" property="schema:name">Summary</h2>
-        <ul>
-            <li>
-                <h3>Solid aims to <em>re-decentralize</em> the Web</h3>
-                <span class="indent">Decouples data from applications</span>
-            </li>
-            <li>
-                <h3>Solid is not a tool, but an <em>ecosystem</em></h3>
-                <span class="indent">A collection of open Web standards (LDP, WebID-OIDC, WAC, LDN, ...)</span>
-            </li>
-            <li>
-                <h3>Tools and libraries implement these standards</h3>
-                <span class="indent">Node Solid Server, Solid React SDK, ...</span>
-            </li>
-        </ul>
     </section>
 
     <footer>
